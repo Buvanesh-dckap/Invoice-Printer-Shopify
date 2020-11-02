@@ -1,5 +1,3 @@
-
-
 <table class="table table-bordered my-5">
 	<thead>
 		<tr>
@@ -14,7 +12,7 @@
 			include_once('header.php');
 			include_once('inc/db.php');
 			
-			//echo $token;
+			
 			$shopName = trim($shop_url,"-myshopify.com");
 			//echo $shopName;
 		

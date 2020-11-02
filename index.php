@@ -9,13 +9,20 @@
   <body class="bg-light">
 	<div class="container py-5">
   
-  <a href="inc/insert.php"><button class="btn btn-primary" type="submit" name="submit">Refresh</button></a>
-  
-		<?php
+    <?php
+    
 		include_once("inc/functions.php");
-		include_once("inc/db.php");
+    include_once("inc/db.php");
 		include_once("header.php");
     include_once("orders.php");
+
+    
+echo "<form action='inc/insert.php' method='post'>
+<input type='hidden' name='shop' id='' value=".$shop_url.">
+<input type='hidden' name='token' id='' value=".$token.">
+  <button class='btn btn-primary' type='submit' name='submit'>Refresh</button>
+</form>";
+    
         
     ?>
         
@@ -28,6 +35,9 @@
       $('#printBtn').on('click', function(e) {
         $('#printThisInvoice').printThis();
       });
+
+      
+
     </script>
   </body>
 </html>
